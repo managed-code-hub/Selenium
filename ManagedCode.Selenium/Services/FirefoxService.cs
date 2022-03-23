@@ -23,7 +23,7 @@ public class FirefoxService : BaseBrowserService, IBrowserService
         options.BrowserExecutableLocation = browserPath;
         options.AcceptInsecureCertificates = true;
         options.PageLoadStrategy = PageLoadStrategy.Normal;
-        //options.AddArgument("--headless");
+        options.AddArgument("--headless");
 
         if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ||
             RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
@@ -33,16 +33,7 @@ public class FirefoxService : BaseBrowserService, IBrowserService
         }
 
         Environment.SetEnvironmentVariable("webdriver.firefox.bin", browserPath, EnvironmentVariableTarget.Process);
-
-        try
-        {
-            return new FirefoxDriver(_browserRootFolder, options);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
+        return new FirefoxDriver(_browserRootFolder, options);
     }
 
     public async Task DownloadBrowser()

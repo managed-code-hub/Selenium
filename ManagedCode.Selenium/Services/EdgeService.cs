@@ -23,7 +23,7 @@ public class EdgeService : BaseBrowserService, IBrowserService
         //options.BinaryLocation = browserPath;
         options.AcceptInsecureCertificates = true;
         options.PageLoadStrategy = PageLoadStrategy.Normal;
-        //options.AddArgument("--headless");
+        options.AddArgument("--headless");
         //options.AddArgument("--start-maximized"); // open Browser in maximized mode
         //options.AddArgument("--disable-infobars"); // disabling infobars
         //options.AddArgument("--disable-extensions"); // disabling extensions
