@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -22,7 +23,10 @@ public class UnitTest1
     [Fact]
     public async Task EdgeTest()
     {
-        var driver = await WebDriverFactory.GetWebDriver(Browser.Edge);
-        driver.Navigate().GoToUrl("https://google.com");
+        if (!RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+        {
+            var driver = await WebDriverFactory.GetWebDriver(Browser.Edge);
+            driver.Navigate().GoToUrl("https://google.com");
+        }
     }
 }

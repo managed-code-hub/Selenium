@@ -12,7 +12,7 @@ on:
 
 jobs:
   
-  build-and-test-ubuntu:
+  build-and-test-macos:
     runs-on: macos-latest
      
     steps:
