@@ -1,6 +1,4 @@
-
-<img alt="managed code selenium" src="https://github.com/managed-code-hub/Selenium/raw/main/logo.png" width="300px" />
-
+![img|300x200](https://github.com/managed-code-hub/Selenium/raw/main/logo.png)
 # ManagedCode.Selenium
 [![.NET](https://github.com/managed-code-hub/Selenium/actions/workflows/dotnet.yml/badge.svg)](https://github.com/managed-code-hub/Selenium/actions/workflows/dotnet.yml)
 [![Coverage Status](https://coveralls.io/repos/github/managed-code-hub/Selenium/badge.svg?branch=main)](https://coveralls.io/github/managed-code-hub/Selenium?branch=main)
