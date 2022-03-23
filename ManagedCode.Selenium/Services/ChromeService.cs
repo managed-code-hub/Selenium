@@ -19,8 +19,7 @@ public class ChromeService : BaseBrowserService, IBrowserService
         await DownloadBrowser();
 
         var options = new ChromeOptions();
-
-        options.BinaryLocation = browserPath;
+        
         options.AcceptInsecureCertificates = true;
         options.PageLoadStrategy = PageLoadStrategy.Normal;
         options.AddArgument("--headless");

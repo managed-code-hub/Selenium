@@ -20,7 +20,6 @@ public class FirefoxService : BaseBrowserService, IBrowserService
         await DownloadBrowser();
 
         var options = new FirefoxOptions();
-        options.BrowserExecutableLocation = browserPath;
         options.AcceptInsecureCertificates = true;
         options.PageLoadStrategy = PageLoadStrategy.Normal;
         options.AddArgument("--headless");
